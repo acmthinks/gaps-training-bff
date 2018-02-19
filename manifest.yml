@@ -1,0 +1,12 @@
+---
+applications:
+- instances: 1
+  timeout: 180
+  name: gapstrainingbff
+  buildpack: java_buildpack
+  path: ./target/gapstrainingbff-1.0-SNAPSHOT.jar
+  memory: 256M
+  domain: mybluemix.net
+  host: gaps-training-bff
+  env:
+    OPENAPI_SPEC : /swagger/api
