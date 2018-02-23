@@ -50,7 +50,6 @@ public class ProductApiController implements ProductApi {
     public ResponseEntity<Product> get(@ApiParam(value = "Product ID",required=true ) @PathVariable("productID") Long productID,
         @RequestHeader(value = "Accept", required = false) String accept) throws Exception {
 
-
         ApiResponseMessage<Product> result = services.get(productID);
 
         if (accept != null && accept.contains("application/json")) {
