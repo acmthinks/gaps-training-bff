@@ -1,0 +1,29 @@
+/**
+ * Feel free to explore, or check out the full documentation
+ * https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/scripting-monitors/writing-api-tests
+ * for details.
+ */
+
+var assert = require('assert');
+
+
+
+//Declare optional metadata
+var options = {
+  //Specify the endpoint URL
+  url: 'http://gaps-training-bff.mybluemix.net/product/2',
+  //Specify headers
+    headers: {
+      'Accept': 'application/json',
+    }
+};
+
+//Define expected results using callback function.
+function callback (err, response, body){
+//Log JSON results from endpoint to Synthetics console.
+ console.log(JSON.parse(body)); 
+ console.log('done with script');
+}
+
+//Make GET request, passing in options and callback.
+$http.get(options,callback);
