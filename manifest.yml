@@ -5,8 +5,10 @@ applications:
   name: gapstrainingbff
   buildpack: java_buildpack
   path: ./target/gapstrainingbff-1.0-SNAPSHOT.jar
-  memory: 256M
+  memory: 512M
   domain: mybluemix.net
   host: gaps-training-bff
   env:
     OPENAPI_SPEC : /swagger/api
+    #uncomment to enable Java debuging
+    #JAVA_OPTS: -agentlib:jdwp=transport=dt_socket,address=YOUR-IP-ADDRESS:YOUR-PORT
