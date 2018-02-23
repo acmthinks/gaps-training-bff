@@ -11,7 +11,7 @@ var assert = require('assert');
 //Declare optional metadata
 var options = {
   //Specify the endpoint URL
-  url: 'http://gaps-training-bff.mybluemix.net/health',
+  url: 'http://gaps-training-bff.mybluemix.net/product/1',
   //Specify headers
     headers: {
       'Accept': 'application/json',
